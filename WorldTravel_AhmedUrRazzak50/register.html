@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body {
+      background-image: url(./photos/registerimg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      align-items: center;
+      height: 100vh;
+    }
+    fieldset {
+      background-color: #162e44;
+      padding: 20px;
+      width: 100%;
+      max-width: 150vh;
+      text-align: center;
+      border: 3px solid #4d93d1;
+      border-radius: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+      background: transparent;
+      color: #e3f4fe;
+      border-color: #4d93d1;
+      outline: none;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px 10px;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007bff;
+      color: #e3f4fe;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+  </style>
+  <body>
+    <div class="container d-flex align-items-center w-100 h-100">
+      <fieldset>
+        <h2 style="color: #e3f4fe">Register Here</h2>
+
+        <form onsubmit="navigateToLogin(event)">
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            required
+            placeholder="Your Name"
+            value=""
+          /><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Your Email"
+            value=""
+          /><br />
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            placeholder="+880 123456789"
+            required
+            maxlength="14"
+            pattern="^([01]|\+88)?\d{11}"
+            title="Mobile number should be in the format: +880XXXXXXXXX"
+            value=""
+          /><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Set password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+            title="Password must be at least 8 characters long, contain at least one lowercase letter, one uppercase letter, one number, and one special character."
+            value=""
+          /><br />
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            required
+            placeholder="Retype password"
+            value=""
+          /><br />
+          <label style="color: #e3f4fe">
+            <input type="checkbox" id="checkbox" name="checkbox" value="" /> I
+            Agree to all <a href="Term.html"> Terms & Conditions </a> </label
+          ><br />
+          <button
+            type="submit"
+            onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='scale(1.05)';"
+            onmouseout="this.style.backgroundColor='#007bff'; this.style.transform='scale(1)';"
+          >
+            Register
+          </button>
+        </form>
+      </fieldset>
+    </div>
+    <script>
+      function navigateToLogin(event) {
+        event.preventDefault();
+        alert('Registered');
+        window.location.href = 'login.html';
+      }
+    </script>
+  </body>
+</html> dont change the code add comment section wise 
